@@ -102,38 +102,59 @@ services:
   kafka-ui:
     container_name: kafka-ui
     image: provectuslabs/kafka-ui:latest
-    network_mode: "host"
     environment:
       DYNAMIC_CONFIG_ENABLED: 'true'
       KAFKA_CLUSTERS_0_NAME: local
-      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: localhost:9092
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: broker:29092
+    ports:
+      - 8072:8080
     deploy:
       resources:
         limits:
           memory: "256M"
+    networks:
+      - opensearch-net
+
+  zipkin-ui:
+    image: ghcr.io/openzipkin/zipkin-ui:${TAG:-latest}
+    container_name: zipkin-ui
+    environment:
+      # Change this if connecting to a different zipkin server
+      - ZIPKIN_BASE_URL=http://zipkin:9411
+    ports:
+      - "8012:80"
+    depends_on:
+      zipkin:
+        condition: service_healthy
 
   zipkin:
     container_name: zipkin
     image: openzipkin/zipkin:3
-    network_mode: "host"
-    expose:
-      - "9411"
+#    network_mode: "host"
+#    expose:
+#      - "9411"
+    ports:
+      # Port used for the Zipkin UI and HTTP Api
+      - "9411:9411"
 
   prometheus:
-    image: bitnami/prometheus:3.0.1
+    image: prom/prometheus:latest
     container_name: prometheus
-    network_mode: "host"
-    expose:
-      - "9090"
+#    network_mode: "host"
     volumes:
       - type: bind
         source: ./prometheus.yml
         target: /etc/prometheus/prometheus.yml
+    ports:
+      # Port used for the Zipkin UI and HTTP Api
+      - "9090:9090"
+    networks:
+      - opensearch-net
 
   grafana:
     image: grafana/grafana-enterprise:11.4.0
     container_name: grafana
-    network_mode: "host"
+#    network_mode: "host"
     expose:
       - "3000"
     environment:
@@ -146,4 +167,6 @@ volumes:
   opensearch-data2:
 
 networks:
+  kafka-net:
+    driver: bridge
   opensearch-net:

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AmplicodePersistenceUnitSettings">
+    <persistence-units>
+      <persistence-unit moduleName="jpql-solution-02" name="Default">
+        <packages>
+          <package value="ru.otus.example.ormdemo" />
+        </packages>
+      </persistence-unit>
+      <persistence-unit moduleName="jpql-solution-final" name="Default">
+        <packages>
+          <package value="ru.otus.example.ormdemo" />
+        </packages>
+      </persistence-unit>
+      <persistence-unit moduleName="jpql-solution-06" name="Default">
+        <packages>
+          <package value="ru.otus.example.ormdemo" />
+        </packages>
+      </persistence-unit>
+      <persistence-unit moduleName="jpql-solution-05" name="Default">
+        <packages>
+          <package value="ru.otus.example.ormdemo" />
+        </packages>
+      </persistence-unit>
+      <persistence-unit moduleName="jpql-solution-04" name="Default">
+        <packages>
+          <package value="ru.otus.example.ormdemo" />
+        </packages>
+      </persistence-unit>
+      <persistence-unit moduleName="jpql-solution-03" name="Default">
+        <packages>
+          <package value="ru.otus.example.ormdemo" />
+        </packages>
+      </persistence-unit>
+      <persistence-unit moduleName="jpql-exercise" name="Default">
+        <packages>
+          <package value="ru.otus.example.ormdemo" />
+        </packages>
+      </persistence-unit>
+      <persistence-unit moduleName="jpql-solution-01" name="Default">
+        <packages>
+          <package value="ru.otus.example.ormdemo" />
+        </packages>
+      </persistence-unit>
+      <persistence-unit moduleName="jpql-demo" name="Default">
+        <packages>
+          <package value="ru.otus.example.jpql_demo" />
+        </packages>
+      </persistence-unit>
+      <persistence-unit moduleName="orm-solution-08" name="Default">
+        <packages>
+          <package value="ru.otus.example.ormdemo" />
+        </packages>
+      </persistence-unit>
+      <persistence-unit moduleName="orm-solution-02" name="Default">
+        <packages>
+          <package value="ru.otus.example.ormdemo" />
+        </packages>
+      </persistence-unit>
+      <persistence-unit moduleName="orm-solution-final" name="Default">
+        <packages>
+          <package value="ru.otus.example.ormdemo" />
+        </packages>
+      </persistence-unit>
+      <persistence-unit moduleName="orm-solution-03" name="Default">
+        <packages>
+          <package value="ru.otus.example.ormdemo" />
+        </packages>
+      </persistence-unit>
+      <persistence-unit moduleName="orm-exercise" name="Default">
+        <packages>
+          <package value="ru.otus.example.ormdemo" />
+        </packages>
+      </persistence-unit>
+      <persistence-unit moduleName="orm-solution-05" name="Default">
+        <packages>
+          <package value="ru.otus.example.ormdemo" />
+        </packages>
+      </persistence-unit>
+      <persistence-unit moduleName="orm-solution-07" name="Default">
+        <packages>
+          <package value="ru.otus.example.ormdemo" />
+        </packages>
+      </persistence-unit>
+      <persistence-unit moduleName="orm-solution-01" name="Default">
+        <packages>
+          <package value="ru.otus.example.ormdemo" />
+        </packages>
+      </persistence-unit>
+      <persistence-unit moduleName="orm-solution-06" name="Default">
+        <packages>
+          <package value="ru.otus.example.ormdemo" />
+        </packages>
+      </persistence-unit>
+      <persistence-unit moduleName="orm-solution-04" name="Default">
+        <packages>
+          <package value="ru.otus.example.ormdemo" />
+        </packages>
+      </persistence-unit>
+    </persistence-units>
+  </component>
+</project>
